@@ -1,0 +1,53 @@
+/*added jmbotron and fixed margin of that jumbotron*/
+.jumbotron
+{
+	margin: 30px;
+}
+/*css for card title font-family and font weight*/ 
+.card-title{
+font-family: Shrikhand;
+font-weight: bold;
+}
+/*css for card text*/
+.card-text{
+font-family: Playfair Display;
+}
+h1{
+text-align: center;
+font-family: Shrikhand;
+}
+/*css for card shadow*/
+.card{
+border: 1px solid;
+padding: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ /*media query for max width 776px and added image margin and card title*/
+@media(min-width: 300px) and (max-width: 766px){
+.images{
+margin: 0 auto;
+}
+.card-title{
+text-align: center;
+}
+}
+/*media query for max width 1200px and added image height and card height*/
+@media(min-width: 767px) and (max-width: 1200px){
+.images{
+max-height:98%;
+}
+
+.card{
+max-height: 98%;
+}
+}
+/*media query for max width 2400px and added image height and card height*/
+@media(min-width: 992px) and (max-width: 2400px){
+.images{
+max-height:98%;
+}
+.card{
+max-height:95%;
+
+}
+}

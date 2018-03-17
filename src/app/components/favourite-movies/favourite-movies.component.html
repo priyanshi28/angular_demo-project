@@ -1,0 +1,24 @@
+
+<!-- Card layout for showing movie data -->
+<div class ="jumbotron">
+<h1 class ="text-center heading"> My Favourite Movies</h1>
+</div>
+<div class="container">
+<div class="row">
+  <div class="col-md-6 py-2" *ngFor="let movie of favMovies">
+    <div class="card">
+    <div class="row">
+    <div class="col-md-4 col-sm-3">
+      <img class="img-fluid d-block images" [attr.src]="movieUrl+movie.poster_path" alt="movie">
+    </div>
+      <div class="col-md-8 col-sm-3">
+        <div class="text-center"><h5 class="card-title">{{movie.title}}</h5></div>
+        <div class="card-body"><p class="card-text"><strong>Overview:</strong>&nbsp;{{(movie.overview .length>100)? (movie.overview | slice:0:150)+'..':(movie.overview)}}</p>
+        <p class="card-text"><strong>Rating:</strong> {{movie.vote_average}}</p></div>
+        <div class="card-footer"><a class="btn btn-success" (click)="deleteMovie(movie.id)">Delete</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
